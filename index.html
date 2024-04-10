@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>To-Do</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div id="container">
+      <div class="card">
+        <h1 class="list-name">
+          Main list
+          <div class="add-list" onclick="createList()">
+            <i class="fa fa-plus"></i>
+          </div>
+        </h1>
+        <section class="inputs">
+          <input type="text" class="task-input" placeholder="Enter your task" />
+          <input
+            type="button"
+            class="task-add"
+            onclick="createTask(this)"
+            value="Add"
+          />
+        </section>
+        <ul class="tasks">
+          <li class="task-item shadow hidden">
+            <div class="ps">
+              <div class="check-container" onclick="check(this)">
+                <span class="checkmark">
+                  <i class="fa fa-check"></i>
+                </span>
+              </div>
+              <label for="task-item" class="task-label">Be goooooood !</label>
+            </div>
+            <div id="icon-div" onclick="removeTask(this.parentNode)">
+              <i class="fa fa-times"></i>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="card hidden" id="cardpicker">
+        <section class="inputs list-inputs">
+          <input type="text" class="list-input" placeholder="Enter list name" />
+          <input
+            type="button"
+            class="list-add"
+            onclick="addList(this.previousElementSibling)"
+            value="Done"
+          />
+        </section>
+        <section class="color-palete">
+          <h2 for="pick">Pick a color</h2>
+          <div class="colors">
+            <span
+              class="color"
+              style="background: lightblue"
+              onclick="changeColor(this)"
+            ></span>
+            <span
+              class="color"
+              style="background: lightgreen"
+              onclick="changeColor(this)"
+            ></span>
+            <span
+              class="color"
+              style="background: hsl(246, 100%, 79%)"
+              onclick="changeColor(this)"
+            ></span>
+            <span
+              class="color"
+              style="background: lightcoral"
+              onclick="changeColor(this)"
+            ></span>
+            <span
+              class="color"
+              style="background: lightcyan"
+              onclick="changeColor(this)"
+            ></span>
+          </div>
+        </section>
+        <h1 class="list-name hidden">
+          Main list
+          <div class="add-list" onclick="createList()">
+            <i class="fa fa-plus"></i>
+          </div>
+        </h1>
+        <section class="inputs hidden">
+          <input type="text" class="task-input" placeholder="Enter your task" />
+          <input
+            type="button"
+            class="task-add"
+            onclick="createTask(this)"
+            value="Add"
+          />
+        </section>
+        <ul class="tasks hidden">
+          <li class="task-item shadow hidden">
+            <div class="ps">
+              <div class="check-container" onclick="check(this)">
+                <span class="checkmark">
+                  <i class="fa fa-check"></i>
+                </span>
+              </div>
+              <label for="task-item" class="task-label">Be goooooood !</label>
+            </div>
+            <div id="icon-div" onclick="removeTask(this.parentNode)">
+              <i class="fa fa-times"></i>
+            </div>
+          </li>
+        </ul>
+        <div id="delete-card" onclick="deleteList(this.parentNode)">
+          <i class="fa fa-trash"></i>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

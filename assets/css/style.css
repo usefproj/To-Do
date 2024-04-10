@@ -1,0 +1,230 @@
+* {
+  outline: 1px rgb(237, 255, 77);
+}
+html {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: linear-gradient(100deg, #1c377c, #3a114c);
+  color: #1e1e1e;
+}
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px;
+  gap: 20px;
+}
+.card {
+  background-color: hsl(246, 100%, 79%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  width: 350px;
+}
+#delete-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: 10px;
+  height: 50px;
+  border-radius: 50vh;
+  width: 0px;
+  background-color: #ff673d;
+}
+#delete-card:hover {
+  transition-duration: 1s;
+  width: 50%;
+}
+.fa-trash {
+  scale: 2;
+}
+.inputs {
+  display: flex;
+}
+.list-name {
+  color: #000000;
+  font-size: 2.5em;
+  font-weight: 500;
+  margin: 0;
+}
+.fa-plus {
+  scale: 0.9;
+}
+.add-list:hover > .fa-plus {
+  color: #ff7a55e2;
+}
+.add-list {
+  display: inline;
+  padding: 2px 10px;
+  border-radius: 50vh;
+  cursor: pointer;
+}
+.task-input,
+.task-add {
+  padding: 15px;
+  border-radius: 50vh;
+  font-size: large;
+  border: 0;
+}
+.task-input {
+  background-color: #eaedeee7;
+  color: #ff673d;
+  font-weight: 550;
+  width: 84%;
+}
+.task-input::placeholder {
+  font-weight: 500;
+  color: #ff673d;
+  opacity: 0.8;
+}
+.task-add {
+  background-color: #ff673d;
+  margin-left: -45px;
+  cursor: pointer;
+}
+.task-add:hover {
+  background-color: #ff997d;
+  scale: 1.2;
+}
+
+.list-input,
+.list-add {
+  padding: 15px;
+  border-radius: 50vh;
+  font-size: large;
+  border: 0;
+  flex-shrink: 0;
+}
+.list-input {
+  background-color: #eaedeee7;
+  color: #222222ce;
+  font-weight: 550;
+  width: 84%;
+}
+.list-input::placeholder {
+  color: #222;
+  opacity: 0.8;
+}
+.list-add {
+  background-color: #222;
+  color: #eaedeee7;
+  font-weight: 700;
+  margin-left: -45px;
+  cursor: pointer;
+}
+.list-add:hover {
+  background-color: #696969;
+  scale: 1.2;
+}
+.colors {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  background-color: hsl(246, 92%, 85%);
+  gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.color {
+  padding: 20px;
+  background-color: red;
+  border-radius: 50vh;
+  cursor: pointer;
+}
+.color:hover {
+  transition-duration: 0.25s;
+  scale: 1.2;
+  opacity: 0.7;
+}
+
+.tasks {
+  padding: 10px;
+}
+.task-item {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 15px;
+  margin-right: 30px;
+  background-color: #474747;
+  border-radius: 50vh;
+  width: 90%;
+}
+.ps {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  width: 90%;
+  padding: 5px;
+  padding-left: 10px;
+}
+.hidden {
+  display: none;
+}
+.shadow {
+  -webkit-box-shadow: inset 0px 0px 7.5px 0px #000000;
+  -moz-box-shadow: inset 0px 0px 7.5px 0px #000000;
+  box-shadow: inset 0px 0px 7.5px 0px #000000;
+}
+.task-label {
+  color: #eaedeee7;
+  font-size: 1.5em;
+  inline-size: 80%;
+  overflow-wrap: break-word;
+}
+.check-container {
+  display: flex;
+  margin-left: 10px;
+  background-color: #eaedeee7;
+  border-radius: 30%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.check-container:hover {
+  animation-duration: 10s;
+  background-color: aliceblue;
+  rotate: 30deg;
+  border-radius: 40%;
+}
+.checkmark {
+  border-radius: inherit;
+  background-color: #ff673d;
+  padding: 2px;
+  visibility: hidden;
+}
+.checkmark:hover {
+  background-color: rgba(255, 103, 61, 0.776);
+}
+.checked-mark {
+  visibility: visible;
+}
+.checked-label {
+  text-decoration: line-through;
+}
+#icon-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 40px;
+  height: 35px;
+  width: 35px;
+  border-radius: 15px;
+}
+#icon-div:hover {
+  cursor: pointer;
+  background-color: #b0b0b02c;
+  color: aliceblue;
+}
+.fa-times {
+  scale: 2;
+}
